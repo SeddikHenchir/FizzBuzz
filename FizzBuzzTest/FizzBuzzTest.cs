@@ -1,4 +1,6 @@
+using FizzBuzzProj;
 using NUnit.Framework;
+using System.Text;
 
 namespace Tests
 {
@@ -12,26 +14,54 @@ namespace Tests
         [Test]
         public void NumericValue()
         {
-            Assert.Pass();
+            Assert.IsTrue(FizzBuzz.CalcFizzBuzz("Hello").ToString().Equals("Valeur invalide"));
         }
         [Test]
         public void NonNegativeValue()
         {
-            Assert.Pass();
+            Assert.IsTrue(FizzBuzz.CalcFizzBuzz("-1").ToString().Equals("Valeur invalide"));
         }
         [Test]
         public void Multiple_3()
         {
-            Assert.Pass();
+            StringBuilder _stbuilder = new StringBuilder() { };
+            _stbuilder.AppendLine("Fizz");
+            _stbuilder.AppendLine("2");
+            _stbuilder.AppendLine("1");
+            Assert.IsTrue(FizzBuzz.myResult.Equals(_stbuilder));
+
         }
         [Test]
         public void Multiple_5()
         {
-            Assert.Pass();
+            StringBuilder _stbuilder = new StringBuilder() { };
+            _stbuilder.AppendLine("Buzz");
+            _stbuilder.AppendLine("4");
+            _stbuilder.AppendLine("Fizz");
+            _stbuilder.AppendLine("2");
+            _stbuilder.AppendLine("1");
+            Assert.IsTrue(FizzBuzz.myResult.Equals(_stbuilder));
         }
+        [Test]
         public void Multiple_5_3()
         {
-            Assert.Pass();
+            StringBuilder _stbuilder = new StringBuilder() { };
+            _stbuilder.AppendLine("FizzBuzz");
+            _stbuilder.AppendLine("14");
+            _stbuilder.AppendLine("13");
+            _stbuilder.AppendLine("Fizz");
+            _stbuilder.AppendLine("11");
+            _stbuilder.AppendLine("Buzz");
+            _stbuilder.AppendLine("Fizz");
+            _stbuilder.AppendLine("8");
+            _stbuilder.AppendLine("7");
+            _stbuilder.AppendLine("Fizz");
+            _stbuilder.AppendLine("Buzz");
+            _stbuilder.AppendLine("4");
+            _stbuilder.AppendLine("Fizz");
+            _stbuilder.AppendLine("2");
+            _stbuilder.AppendLine("1");
+            Assert.IsTrue(FizzBuzz.myResult.Equals(_stbuilder));
         }
     }
 }
