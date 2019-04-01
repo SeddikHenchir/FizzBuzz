@@ -28,6 +28,7 @@ namespace Tests
             _stbuilder.AppendLine("Fizz");
             _stbuilder.AppendLine("2");
             _stbuilder.AppendLine("1");
+            FizzBuzz.CalcFizzBuzz("3");
             Assert.IsTrue(FizzBuzz.myResult.Equals(_stbuilder));
 
         }
@@ -40,6 +41,7 @@ namespace Tests
             _stbuilder.AppendLine("Fizz");
             _stbuilder.AppendLine("2");
             _stbuilder.AppendLine("1");
+            FizzBuzz.CalcFizzBuzz("5");
             Assert.IsTrue(FizzBuzz.myResult.Equals(_stbuilder));
         }
         [Test]
@@ -61,6 +63,7 @@ namespace Tests
             _stbuilder.AppendLine("Fizz");
             _stbuilder.AppendLine("2");
             _stbuilder.AppendLine("1");
+            FizzBuzz.CalcFizzBuzz("15");
             Assert.IsTrue(FizzBuzz.myResult.Equals(_stbuilder));
         }
     }
